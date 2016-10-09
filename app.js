@@ -23,5 +23,3 @@ if (typeof argv.l === 'string' && argv.l.length > 0) {
     })
   })
 }
-
-console.log('after all requests being declared')
