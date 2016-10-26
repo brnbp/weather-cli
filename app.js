@@ -9,17 +9,17 @@ const argv = require('yargs')
     type: 'string'
   })
   .help('help')
-  .argv;
+  .argv
 
 if (typeof argv.l === 'string' && argv.l.length > 0) {
     weather(argv.l, function (currentWeather) {
-      console.log(currentWeather);
+      console.log(currentWeather)
     })
 } else {
   location(function (response) {
     if (!response) throw 'unable to find location'
     weather(response.city, function (currentWeather) {
-      console.log(currentWeather);
+      console.log(currentWeather)
     })
   })
 }
