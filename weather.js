@@ -7,7 +7,7 @@ module.exports = function (location, callback) {
   const encodedLocation = encodeURIComponent(location);
 
   if (!encodedLocation) {
-    return console.log('no location provided')
+    return console.log('no location provided');
   }
 
   const url = `http://api.openweathermap.org/data/2.5/weather?appid=${apiKey}&q=${encodedLocation}&units=metric`
@@ -16,7 +16,7 @@ module.exports = function (location, callback) {
     url: url,
     json: true
   }, function (err, response, body) {
-    if (err) throw err
-    callback(`It's ${Math.floor(body.main.temp)} in ${body.name}`)
+    if (err) throw err;
+    callback(`It's ${Math.floor(body.main.temp)} in ${body.name}`);
   })
 }
