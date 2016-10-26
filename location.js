@@ -6,8 +6,8 @@ module.exports = function(callback) {
     url: url,
     json: true
   }, function(err, res, body) {
-    if (err) throw err
-    if (!body) return null
+    if (err) throw err;
+    if (!body) return null;
     callback({
       city: body.city,
       loc: body.loc
